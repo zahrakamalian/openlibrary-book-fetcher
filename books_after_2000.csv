@@ -1,51 +1,51 @@
-title,authors,first_publish_year,edition_count,cover_i,key
-The Lightning Thief,Rick Riordan,2005,101,7239831,/works/OL492658W
-Twilight,Stephenie Meyer,2005,120,12641977,/works/OL5720023W
-Harry Potter and the Deathly Hallows,J. K. Rowling,2007,144,15158660,/works/OL82586W
-Harry Potter and the Half-Blood Prince,J. K. Rowling,2005,176,10716273,/works/OL82565W
-Harry Potter and the Order of the Phoenix,J. K. Rowling,2003,246,15158666,/works/OL82548W
-Catching Fire,Suzanne Collins,2009,112,12646539,/works/OL5735360W
-The Hunger Games,Suzanne Collins,2008,142,12646537,/works/OL5735363W
-Coraline,Neil Gaiman,2001,94,14171421,/works/OL679358W
-New Moon,Stephenie Meyer,2006,88,12643406,/works/OL5720027W
-The Name of the Wind,"Patrick Rothfuss, Marc Simonetti",2007,76,11480483,/works/OL8479867W
-American Gods,Neil Gaiman,2001,72,8494659,/works/OL679360W
-The Sea of Monsters,Rick Riordan,2006,72,108909,/works/OL492646W
-The Martian,Andy Weir,2011,71,11447888,/works/OL17091839W
-A Feast for Crows,George R. R. Martin,2005,69,6501256,/works/OL257948W
-Tintenherz,Cornelia Funke,2003,69,3330314,/works/OL941669W
-Artemis Fowl and the Eternity Code,Eoin Colfer,2003,63,12636263,/works/OL5725961W
-The Battle of the Labyrinth,Rick Riordan,2008,62,6274739,/works/OL492640W
-Room on the Broom,Julia Donaldson,2001,61,10839950,/works/OL1938251W
-The Titan's Curse,Rick Riordan,2007,61,14601475,/works/OL492647W
-Cell,Stephen King,2006,61,14654054,/works/OL81597W
-Everything's Eventual. 14 Dark Tales,Stephen King,2002,60,8585782,/works/OL81584W
-The Children of Húrin,J.R.R. Tolkien,2001,59,8220298,/works/OL27471W
-The Willows,Algernon Blackwood,2002,280,2751803,/works/OL2700635W
-The Last Olympian,Rick Riordan,2009,57,6624107,/works/OL492642W
-Dreamcatcher,Stephen King,2001,55,14651654,/works/OL81598W
-The Red Pyramid,Rick Riordan,2009,54,11272966,/works/OL15183119W
-The Lost Hero,Rick Riordan,2010,53,12848687,/works/OL15401200W
-Wintersmith,"Terry Pratchett, Paul Kidby",2006,52,14645769,/works/OL453989W
-Tale of Despereaux,Kate DiCamillo,2003,52,541143,/works/OL468677W
-La ciudad de las bestias,Isabel Allende,2002,52,35590,/works/OL1905269W
-Jonathan Strange and Mr. Norrell,Susanna Clarke,2001,51,525391,/works/OL5703422W
-Wolves of the Calla,Stephen King,2003,50,14652470,/works/OL81594W
-Artemis Fowl and the Arctic Incident,Eoin Colfer,2001,50,8231795,/works/OL5725964W
-The Penelopiad,Margaret Atwood,2005,50,4860886,/works/OL675737W
-Under the Dome,Stephen King,2009,50,14651549,/works/OL14917748W
-Bleach,Tite Kubo,2004,49,8786809,/works/OL8756238W
-A Dance With Dragons,George R. R. Martin,2008,49,11298743,/works/OL1955906W
-The Ocean at the End of the Lane,"Neil Gaiman, Mónica Faerna, Patrick Marcel, Lluís Delgado, Oriol Hernández",2013,49,7258156,/works/OL16804661W
-Oryx and Crake,Margaret Atwood,2002,49,12507658,/works/OL675722W
-Into the Wild,Erin Hunter,2003,49,12720669,/works/OL265501W
-A Hat Full of Sky,Terry Pratchett,2004,48,7092840,/works/OL453737W
-The Amazing Maurice and His Educated Rodents,Terry Pratchett,2001,48,14645777,/works/OL453885W
-The Passage,Justin Cronin,2010,47,8261369,/works/OL15168588W
-The Opal Deception,Eoin Colfer,2005,46,12636364,/works/OL5725975W
-The Kingdom of Fantasy,"Elisabetta Dami, David Nel·lo, Larry Keys, Titi Plumederat, Koldo Biguri",2005,16,14416105,/works/OL15493152W
-The Final Empire,Brandon Sanderson,2001,44,14658160,/works/OL5738148W
-The Tales of Beedle the Bard,J. K. Rowling,2008,44,13776199,/works/OL13716951W
-Four,Veronica Roth,2001,44,7314248,/works/OL16825084W
-Anansi Boys,Neil Gaiman,2005,43,12049134,/works/OL679266W
-The Angel Experiment,James Patterson,2001,43,287715,/works/OL167174W
+title,authors,first_publish_year
+The Lightning Thief,Rick Riordan,2005
+Twilight,Stephenie Meyer,2005
+Harry Potter and the Deathly Hallows,J. K. Rowling,2007
+Harry Potter and the Half-Blood Prince,J. K. Rowling,2005
+Harry Potter and the Order of the Phoenix,J. K. Rowling,2003
+Catching Fire,Suzanne Collins,2009
+The Hunger Games,Suzanne Collins,2008
+Coraline,Neil Gaiman,2001
+New Moon,Stephenie Meyer,2006
+The Name of the Wind,"Patrick Rothfuss, Marc Simonetti",2007
+American Gods,Neil Gaiman,2001
+The Sea of Monsters,Rick Riordan,2006
+The Martian,Andy Weir,2011
+A Feast for Crows,George R. R. Martin,2005
+Tintenherz,Cornelia Funke,2003
+Artemis Fowl and the Eternity Code,Eoin Colfer,2003
+The Battle of the Labyrinth,Rick Riordan,2008
+Room on the Broom,Julia Donaldson,2001
+The Titan's Curse,Rick Riordan,2007
+Cell,Stephen King,2006
+Everything's Eventual. 14 Dark Tales,Stephen King,2002
+The Children of Húrin,J.R.R. Tolkien,2001
+The Willows,Algernon Blackwood,2002
+The Last Olympian,Rick Riordan,2009
+Dreamcatcher,Stephen King,2001
+The Red Pyramid,Rick Riordan,2009
+The Lost Hero,Rick Riordan,2010
+Wintersmith,"Terry Pratchett, Paul Kidby",2006
+Tale of Despereaux,Kate DiCamillo,2003
+La ciudad de las bestias,Isabel Allende,2002
+Jonathan Strange and Mr. Norrell,Susanna Clarke,2001
+Wolves of the Calla,Stephen King,2003
+Artemis Fowl and the Arctic Incident,Eoin Colfer,2001
+The Penelopiad,Margaret Atwood,2005
+Under the Dome,Stephen King,2009
+Bleach,Tite Kubo,2004
+A Dance With Dragons,George R. R. Martin,2008
+The Ocean at the End of the Lane,"Neil Gaiman, Mónica Faerna, Patrick Marcel, Lluís Delgado, Oriol Hernández",2013
+Oryx and Crake,Margaret Atwood,2002
+Into the Wild,Erin Hunter,2003
+A Hat Full of Sky,Terry Pratchett,2004
+The Amazing Maurice and His Educated Rodents,Terry Pratchett,2001
+The Passage,Justin Cronin,2010
+The Opal Deception,Eoin Colfer,2005
+The Kingdom of Fantasy,"Elisabetta Dami, David Nel·lo, Larry Keys, Titi Plumederat, Koldo Biguri",2005
+The Final Empire,Brandon Sanderson,2001
+The Tales of Beedle the Bard,J. K. Rowling,2008
+Four,Veronica Roth,2001
+Anansi Boys,Neil Gaiman,2005
+The Angel Experiment,James Patterson,2001
