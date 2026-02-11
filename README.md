@@ -11,6 +11,7 @@ A simple Python script that searches for books using the public OpenLibrary API,
 ## Requirements
 - Python 3.8 or higher
 - `requests` library  
+
   ```bash
   pip install requests
 
@@ -22,7 +23,6 @@ How to Run
 3. Run the script:
 
 Bash
-
 ```
 python get-books.py
 ```
@@ -39,9 +39,3 @@ Notes
 * API used: https://openlibrary.org/dev/docs/api/search (no API key required)
 * To see available topics, check: https://openlibrary.org/subjects
 
-Project Details
-
-* Created for Python project assignment
-* Last updated: February 2025
-
-Enjoy exploring recent books!

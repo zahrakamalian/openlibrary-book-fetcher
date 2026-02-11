@@ -3,8 +3,7 @@ import csv
 
 
 # Get user input for search topics
-search_query = input(
-    "Enter genre or topic (e.g. programming, fantasy, science fiction): ").strip() or "programming"
+search_query = input("Enter genre or topic (e.g. programming, fantasy, science fiction): ").strip() or "programming"
 
 # Higher limit to increase chance of getting 50+ after filtering
 limit = 500
@@ -50,8 +49,9 @@ try:
             writer.writeheader()
             writer.writerows(filtered_books)
 
-        print(f"ُSaved to: {csv_filename}")
-
+        print(f"Saved to: {csv_filename}")
+        # Tested with "crime" subject and the result saved
+        
 except requests.exceptions.RequestException as e:
     print(f"error connecting API: {e}")
 except Exception as e:
