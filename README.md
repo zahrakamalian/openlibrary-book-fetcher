@@ -12,8 +12,17 @@ A simple Python script that searches for books using the public OpenLibrary API,
 - Python 3.8 or higher
 - `requests` library  
 
-  ```bash
+  bash
+  ```
   pip install requests
+  ```
+
+  or install from requirements.txt:
+  
+  bash
+  ```
+  pip install -r requirements.txt
+  ```
 
 
 How to Run
