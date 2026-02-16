@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLibrary Book Search</title>
+    <style>
+        :root {
+            --bg: #f4f4f9;
+            --text: #333;
+            --card-bg: white;
+            --input-border: #ddd;
+            --button-bg: #3498db;
+            --button-hover: #2980b9;
+            --error: #e74c3c;
+            --shadow: rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1e1e1e;
+                --text: #e0e0e0;
+                --card-bg: #2d2d2d;
+                --input-border: #444;
+                --button-bg: #4a90e2;
+                --button-hover: #357abd;
+                --error: #ff6b6b;
+                --shadow: rgba(0,0,0,0.4);
+            }
+        }
+
+        body { 
+            font-family: Arial, sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            padding: 20px; 
+            color: var(--text); 
+        }
+
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        h1 { 
+            text-align: center; 
+            color: var(--text); 
+            margin-bottom: 40px; 
+        }
+
+        form { 
+            text-align: center; 
+            margin: 30px 0; 
+        }
+
+        input[type="text"] {
+            padding: 12px 20px;
+            font-size: 16px;
+            width: 400px;
+            max-width: 90%;
+            border: 2px solid var(--input-border);
+            border-radius: 6px;
+            background: var(--card-bg);
+            color: var(--text);
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 16px;
+            background: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover:not(:disabled) { 
+            background: var(--button-hover); 
+        }
+
+        .error { 
+            color: var(--error); 
+            text-align: center; 
+            font-weight: bold; 
+            margin: 20px 0; 
+        }
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* هر ردیف دقیقاً ۳ کارت */
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        /* تبلت: ۲ کارت */
+        @media (max-width: 1024px) {
+            .results {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* موبایل: ۱ کارت */
+        @media (max-width: 600px) {
+            .results {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .book-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 520px; /* ارتفاع ثابت برای همه کارت‌ها */
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px var(--shadow);
+        }
+
+        .cover-container {
+            width: 100%;
+            height: 320px; /* ارتفاع ثابت */
+            background: #eef2f6;
+            flex-shrink: 0; /* جلوگیری از کوچک شدن */
+        }
+
+        .cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .no-cover {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef2f6;
+            color: #95a5a6;
+            font-size: 1rem;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .info {
+            padding: 18px;
+            flex: 1;
+        }
+
+        .title {
+            margin: 0 0 10px;
+            font-size: 1.35rem;
+            line-height: 1.35;
+        }
+
+        .authors {
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .year {
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Book Search (After 2000)</h1>
+
+    <form method="POST">
+        <input 
+            type="text" 
+            name="query" 
+            placeholder="Enter genre or topic (e.g. programming, fantasy)..." 
+            value="{{ query }}" 
+            autofocus
+        >
+        <button type="submit">Search</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if books %}
+        <div class="results">
+            {% for book in books %}
+                <div class="book-card">
+                    <div class="cover-container">
+                        {% if book.cover_id %}
+                            <img 
+                                class="cover" 
+                                src="https://covers.openlibrary.org/b/id/{{ book.cover_id }}-M.jpg" 
+                                alt="{{ book.title }}" 
+                                loading="lazy"
+                            >
+                        {% else %}
+                            <div class="no-cover">No cover available</div>
+                        {% endif %}
+                    </div>
+                    <div class="info">
+                        <h3 class="title">{{ book.title }}</h3>
+                        <p class="authors">Authors: {{ book.authors }}</p>
+                        <p class="year">First Published: {{ book.first_publish_year }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
