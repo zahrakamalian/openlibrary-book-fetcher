@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# Output files
+books_after_2000.csv
+*.csv
+
+# Misc
+.DS_Store|

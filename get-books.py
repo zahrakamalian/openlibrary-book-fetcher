@@ -1,33 +1,35 @@
 import requests
 import csv
+from typing import Any
 
 
 # Get user input for search topics
-search_query = (
+search_query: str = (
     input("Enter genre or topic (e.g. programming, fantasy, science fiction): ").strip()
     or "programming"
 )
 
 # Higher limit to increase chance of getting 50+ after filtering
-limit = 500
+limit: int = 500
+
 # Build API URL
-url = f"https://openlibrary.org/search.json?q={search_query}&limit={limit}"
+url: str = f"https://openlibrary.org/search.json?q={search_query}&limit={limit}"
 
 print(f"searching for: {search_query}...")
 
-filtered_books = []
+filtered_books: list[dict[str, Any]] = []
 
 try:
-    response = requests.get(url, timeout=30)
+    response: requests.Response = requests.get(url, timeout=30)
     response.raise_for_status()
 
-    data = response.json()
-    books = data.get("docs", [])
+    data: dict[str, Any] = response.json()
+    books: list[dict[str, Any]] = data.get("docs", [])
 
     for book in books:
-        year = book.get("first_publish_year")
+        year: Any = book.get("first_publish_year")
         if isinstance(year, int) and year > 2000:
-            filtered_book = {
+            filtered_book: dict[str, Any] = {
                 "title": book.get("title", "unknown"),
                 "authors": ", ".join(book.get("author_name", ["unknown"])),
                 "first_publish_year": year,
@@ -44,11 +46,12 @@ try:
         print("No books found! Try another topic or check connection.")
 
     if filtered_books:
-        csv_filename = "books_after_2000.csv"
-        fieldnames = ["title", "authors", "first_publish_year"]
+        csv_filename: str = "books_after_2000.csv"
+        fieldnames: list[str] = ["title", "authors", "first_publish_year"]
 
         with open(csv_filename, "w", newline="", encoding="utf-8") as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer: csv.DictWriter = csv.DictWriter(
+                csvfile, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(filtered_books)
 
